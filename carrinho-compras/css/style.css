@@ -1,0 +1,445 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(254, 251, 255);
+    font-family: 'Lato', Helvetics, Arial;
+    font-size: 15px;
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header{
+    display: none;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 60px;
+    position: fixed;
+    background-color: rgb(192, 60, 188);
+    align-items: center;
+}
+
+.menu-openner{
+    margin-right: 15px;
+    font-size: 26px;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.menu-openner span{
+    margin-right: 10px;
+}
+
+.menu-close{
+    width: 32px;
+    height: 32px;
+    display: none;
+    font-size: 30px;
+}
+
+.modeloWindowArea{
+    display: none;
+}
+
+.models {
+    display: none;
+}
+
+.modelo-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.modelo-item {
+    text-align: center;
+    max-width: 250px;
+    font-family: 'Poppins', Arial;
+    margin: 0 auto 50px auto;
+}
+
+main {
+    font-family: 'Poppins', Arial;
+    flex: 1;
+    padding: 20px;
+}
+
+
+.modelo-item a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.modelo-item-img{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(254, 251, 255);
+}
+
+.modelo-item-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: 0px 10px 50px rgb(214, 116, 211);
+}
+
+.modelo-item-add{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: rgb(255, 181, 240);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.modelo-item a:hover .modelo-item-add{
+    background-color: rgb(192, 60, 188);;
+}
+
+.modelo-item-price{
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+}
+
+.modelo-item-name{
+    font-size: 16.2px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-top: 7px;
+}
+
+.modelo-item-desc{
+    font-size: 13px;
+    color: rgb(0, 0, 0);;
+    margin-top: 2px;
+}
+
+h1{
+    font-family: 'Poppins', Arial;
+}
+
+aside{
+    background-color: rgb(218, 204, 255);
+    width: 0vw;
+    overflow-x: hidden;
+    font-family:  'Poppins', Arial;
+}
+
+.cart-area{
+    padding: 20px;
+}
+
+.modeloWindowArea{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(222, 160, 223, 0.515);
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.modeloWindowBody {
+    width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #999;
+    display: flex;
+    margin: 20px 0px;
+  }
+  .modeloBig {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modeloBig-back {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+  }
+  .modeloBig img {
+    height: 400px;
+    width: auto;
+  }
+  .modeloInfo {
+    flex: 1;
+    font-family: 'Hepta Slab', Helvetica, Arial;
+    padding-bottom: 50px;
+  }
+  .modeloInfo h1 {
+    margin-top: 50px;
+  }
+  .modeloInfo .modeloInfo-desc {
+    font-size: 15px;
+    color: #999;
+    margin-top: 10px;
+    font-family: 'Lato', Helvetica, Arial;
+  }
+  .modeloInfo-sector {
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .modeloInfo-sizes {
+    display: inline-flex;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .modeloInfo-size {
+    padding: 10px 15px;
+    color: #000;
+    background-color: #eee;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .modeloInfo-size:hover {
+    background-color: #ccc;
+  }
+  .modeloInfo-size.selected {
+    background-color: #399ade;
+    color: #fff;
+  }
+  .modeloInfo-size.selected span {
+    color: #d6d6d6;
+  }
+  .modeloInfo-size span {
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+  }
+  .modeloInfo-price {
+    display: flex;
+    align-items: center;
+  }
+  .modeloInfo-actualPrice {
+    font-size: 28px;
+    margin-right: 30px;
+  }
+  .modeloInfo-qtarea {
+    display: inline-flex;
+    background-color: #eee;
+    border-radius: 10px;
+    height: 30px;
+  }
+  .modeloInfo-qtarea button {
+    border: 0;
+    background-color: transparent;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0px 10px;
+    color: #333;
+  }
+  .modeloInfo-qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color: #000;
+  }
+  .modeloInfo-addButton {
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #48d05f;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+  .modeloInfo-addButton:hover {
+    background-color: #32a345;
+  }
+  .modeloInfo-cancelButton {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .modeloInfo-cancelMobileButton {
+    display: none;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+  .cart {
+    margin-bottom: 20px;
+  }
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .cart-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+  .cart-item-nome {
+    flex: 1;
+  }
+  .cart-item-qtarea {
+    display: inline-flex;
+    background-color: #eee;
+    border-radius: 10px;
+    height: 30px;
+  }
+  .cart-item-qtarea button {
+    border: 0;
+    background-color: transparent;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0px 10px;
+    color: #333;
+  }
+  .cart-item-qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color: #000;
+  }
+  .cart-totalitem {
+    padding: 15px 0;
+    border-top: 1px solid #79b9dd;
+    color: #315970;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+  .cart-totalitem span:first-child {
+    font-weight: bold;
+  }
+  .cart-totalitem.big {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+  }
+  .cart-finalizar {
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #48d05f;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid #63f77c;
+    transition: all ease 0.2s;
+  }
+  .cart-finalizar:hover {
+    background-color: #35af4a;
+  }
+  @media (max-width: 1000px) {
+    .modelo-area {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 840px) {
+    body {
+      flex-direction: column;
+    }
+    .modelo-area {
+      display: block;
+    }
+    .modelo-item {
+      max-width: 100%;
+    }
+    header {
+      display: flex;
+    }
+    main {
+      padding-top: 60px;
+    }
+  
+    aside {
+      width: auto;
+      position: fixed;
+      left: 100vw;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transition: all ease 0.5s;
+    }
+    aside.show {
+      width: auto;
+    }
+    .cart-area {
+      width: 100vw;
+    }
+  
+    .menu-closer {
+      display: block;
+    }
+  
+    .modeloWindowArea {
+      justify-content: flex-start;
+      align-items: flex-start;
+      transition: all ease 0.5s;
+    }
+  
+    .modeloWindowBody {
+      width: 100vw;
+      display: block;
+      padding: 20px;
+      border-radius: 0;
+      box-shadow: none;
+      margin: 0;
+    }
+  
+    .modeloBig img {
+      width: 75%;
+      height: auto;
+    }
+  
+    .modeloInfo h1 {
+      margin-top: 20px;
+    }
+  
+    .modeloInfo-qtarea {
+      height: 60px;
+    }
+    .modeloInfo-qtarea button {
+      font-size: 25px;
+      padding: 0px 25px;
+    }
+    .modeloInfo-qt {
+      line-height: 60px;
+      font-size: 20px;
+    }
+    .modeloInfo-addButton {
+      font-size: 20px;
+      display: block;
+      text-align: center;
+      margin: 30px auto;
+    }
+  
+    .modeloInfo-cancelButton {
+      display: none;
+    }
+    .modeloInfo-cancelMobileButton {
+      display: block;
+    }
+  }
+  
+
