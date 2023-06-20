@@ -136,6 +136,11 @@ aside{
     width: 0vw;
     overflow-x: hidden;
     font-family:  'Poppins', Arial;
+    transition: all ease 0.2s;
+}
+
+aside.show{
+  width: 30vw;
 }
 
 .cart-area{
@@ -321,8 +326,8 @@ aside{
   }
   .cart-totalitem {
     padding: 15px 0;
-    border-top: 1px solid #79b9dd;
-    color: #315970;
+    border-top: 1px solid #000000;
+    color: #000000;
     display: flex;
     justify-content: space-between;
     font-size: 15px;
@@ -338,16 +343,16 @@ aside{
   .cart-finalizar {
     padding: 20px 30px;
     border-radius: 20px;
-    background-color: #48d05f;
-    color: #fff;
+    background-color: #6cd8a2;
+    color: #000000;
     cursor: pointer;
     text-align: center;
     margin-top: 20px;
-    border: 2px solid #63f77c;
+    border: 2px solid #36ff03;
     transition: all ease 0.2s;
   }
   .cart-finalizar:hover {
-    background-color: #35af4a;
+    background-color: #61e497;
   }
   @media (max-width: 1000px) {
     .modelo-area {

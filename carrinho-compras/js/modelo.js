@@ -71,6 +71,6 @@ let modeloJson = [
       img: 'img/vestidoverde.jpg',
       price: 199.99,
       sizes: ['malha', 'dry', 'dry'],
-      description: 'Vestido Longo Verde de Malha',
+      description: 'Vestido Longo Verde de Cetim',
     },
   ];
